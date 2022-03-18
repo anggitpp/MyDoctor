@@ -30,13 +30,13 @@ class DefaultTextField extends StatelessWidget {
             obscureText: isPassword,
             style: mediumText,
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.all(10),
+              contentPadding: EdgeInsets.all(12),
               focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: '#0066CB'.toColor(),
                   ),
                   borderRadius: BorderRadius.circular(10)),
-              border: OutlineInputBorder(
+              enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: lightGrayColor),
                 borderRadius: BorderRadius.circular(10),
               ),

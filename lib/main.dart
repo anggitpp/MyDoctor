@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mydoctor/screens/pages/sign_in_page.dart';
+import 'package:mydoctor/screens/pages/sign_up_page.dart';
 import 'package:mydoctor/screens/pages/welcome_page.dart';
 
 void main() {
@@ -14,8 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SignInPage(),
+      debugShowCheckedModeBanner: true,
+      home: SignUpPage(),
     );
   }
 }
