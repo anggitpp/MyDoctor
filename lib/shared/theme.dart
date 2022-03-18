@@ -17,3 +17,11 @@ TextStyle largeText = GoogleFonts.nunito(
   fontSize: 20,
   color: primaryColor,
 );
+
+double phoneWidth(context) {
+  return MediaQuery.of(context).size.width;
+}
+
+double phoneHeight(context) {
+  return MediaQuery.of(context).size.height;
+}
