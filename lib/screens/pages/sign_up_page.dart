@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mydoctor/screens/widgets/default_button.dart';
+import 'package:mydoctor/screens/widgets/default_header.dart';
 import 'package:mydoctor/screens/widgets/default_text_field.dart';
-import 'package:mydoctor/shared/theme.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -13,26 +13,7 @@ class SignUpPage extends StatelessWidget {
           child: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Icon(
-                    Icons.arrow_back,
-                    color: primaryColor,
-                    size: 24,
-                  ),
-                  Text(
-                    'Daftar Akun',
-                    style: largeText,
-                  ),
-                  const SizedBox(
-                    width: 24,
-                  ),
-                ],
-              ),
-            ),
+            const DefaultHeader(text: 'Daftar Akun'),
             Container(
               margin: const EdgeInsets.all(40),
               child: Column(
@@ -56,7 +37,7 @@ class SignUpPage extends StatelessWidget {
                 ],
               ),
             ),
-            DefaultButton(text: 'Continue'),
+            const DefaultButton(text: 'Continue'),
           ],
         ),
       )),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mydoctor/screens/widgets/default_button.dart';
 import 'package:mydoctor/screens/widgets/default_text_field.dart';
 import 'package:mydoctor/shared/theme.dart';
-import 'package:supercharged/supercharged.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -41,7 +40,7 @@ class SignInPage extends StatelessWidget {
                   label: 'Password',
                   isPassword: true,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(
@@ -49,11 +48,11 @@ class SignInPage extends StatelessWidget {
                   style:
                       smallText.copyWith(decoration: TextDecoration.underline),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                DefaultButton(text: 'Sign In'),
-                SizedBox(
+                const DefaultButton(text: 'Sign In'),
+                const SizedBox(
                   height: 30,
                 ),
                 Center(

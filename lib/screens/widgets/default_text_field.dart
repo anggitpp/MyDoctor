@@ -22,7 +22,7 @@ class DefaultTextField extends StatelessWidget {
           label,
           style: mediumText.copyWith(color: grayColor),
         ),
-        SizedBox(
+        const SizedBox(
           height: 6,
         ),
         SizedBox(
@@ -30,7 +30,7 @@ class DefaultTextField extends StatelessWidget {
             obscureText: isPassword,
             style: mediumText,
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.all(12),
+              contentPadding: const EdgeInsets.all(12),
               focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: '#0066CB'.toColor(),
