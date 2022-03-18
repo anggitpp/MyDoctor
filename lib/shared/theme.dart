@@ -5,12 +5,12 @@ import 'package:supercharged/supercharged.dart';
 Color primaryColor = '#112340'.toColor();
 Color secondaryColor = '#0BCAD4'.toColor();
 Color lightBlueColor = '#EDFCFD'.toColor();
-Color lightGrayColor = '#7D8797'.toColor();
-Color grayColor = '#E9E9E9'.toColor();
+Color lightGrayColor = '#E9E9E9'.toColor();
+Color grayColor = '#7D8797'.toColor();
 
 double defaultMargin = 16;
 
-TextStyle smallText = GoogleFonts.nunito(fontSize: 12, color: lightGrayColor);
+TextStyle smallText = GoogleFonts.nunito(fontSize: 12, color: grayColor);
 TextStyle mediumText = GoogleFonts.nunito(fontSize: 16, color: primaryColor);
 TextStyle largeText = GoogleFonts.nunito(
   fontWeight: FontWeight.w600,
