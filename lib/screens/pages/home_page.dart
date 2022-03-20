@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mydoctor/controllers/home_page_controller.dart';
 import 'package:mydoctor/models/consultation_category.dart';
 import 'package:mydoctor/models/doctor.dart';
+import 'package:mydoctor/models/news.dart';
 import 'package:mydoctor/screens/widgets/consultation_box.dart';
 import 'package:mydoctor/screens/widgets/news_widget.dart';
 import 'package:mydoctor/screens/widgets/people_profile.dart';
@@ -118,8 +119,16 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              NewsWidget(),
-              NewsWidget(),
+              ListView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: dummyNews.length,
+                  itemBuilder: ((context, index) {
+                    var data = dummyNews[index];
+                    return NewsWidget(
+                      news: data,
+                    );
+                  })),
             ],
           ),
         ),

@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:mydoctor/shared/theme.dart';
+import 'package:mydoctor/models/news.dart';
 import 'package:supercharged/supercharged.dart';
 
+import 'package:mydoctor/shared/theme.dart';
+
 class NewsWidget extends StatelessWidget {
-  const NewsWidget({Key? key}) : super(key: key);
+  final News news;
+  const NewsWidget({
+    Key? key,
+    required this.news,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +28,7 @@ class NewsWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Is it safe to stay at home during corona virus?',
+                      news.title,
                       style: mediumText,
                     ),
                     SizedBox(
@@ -41,7 +47,7 @@ class NewsWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(11),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/news/news-1.png'),
+                    image: AssetImage('assets/images/news/' + news.imageURL),
                   ),
                 ),
               )
