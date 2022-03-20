@@ -4,9 +4,13 @@ import 'package:mydoctor/shared/theme.dart';
 
 class DefaultHeader extends StatelessWidget {
   final String text;
+  final TextStyle? textStyle;
+  final Color? arrowColor;
   const DefaultHeader({
     Key? key,
     required this.text,
+    this.textStyle,
+    this.arrowColor,
   }) : super(key: key);
 
   @override
@@ -18,12 +22,12 @@ class DefaultHeader extends StatelessWidget {
         children: [
           Icon(
             Icons.arrow_back,
-            color: primaryColor,
+            color: arrowColor ?? primaryColor,
             size: 24,
           ),
           Text(
             text,
-            style: largeText,
+            style: textStyle ?? largeText,
           ),
           const SizedBox(
             width: 24,
