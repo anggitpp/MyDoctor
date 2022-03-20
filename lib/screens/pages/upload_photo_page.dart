@@ -94,6 +94,7 @@ class UploadPhotoPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   DefaultButton(
+                    onTap: () {},
                     text: 'Upload and Continue',
                     backgroundColor: '#EDEEF0'.toColor(),
                     textColor: '#B1B7C2'.toColor(),

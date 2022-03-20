@@ -6,12 +6,14 @@ class DefaultButton extends StatelessWidget {
   final Color? backgroundColor;
   final Color? textColor;
   final String text;
+  final Function() onTap;
 
   const DefaultButton({
     Key? key,
     this.backgroundColor,
     this.textColor,
     required this.text,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -20,7 +22,7 @@ class DefaultButton extends StatelessWidget {
       width: phoneWidth(context) - 2 * 40,
       height: 45,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onTap,
         style: ElevatedButton.styleFrom(
           elevation: 0,
           primary: backgroundColor ?? secondaryColor,

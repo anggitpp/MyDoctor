@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mydoctor/screens/widgets/default_button.dart';
 import 'package:mydoctor/shared/theme.dart';
 
@@ -53,7 +54,8 @@ class WelcomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    const DefaultButton(
+                    DefaultButton(
+                      onTap: () {},
                       text: 'Get Started',
                     ),
                     const SizedBox(
@@ -61,6 +63,7 @@ class WelcomePage extends StatelessWidget {
                     ),
                     DefaultButton(
                       text: 'Sign In',
+                      onTap: () => Get.toNamed('/home'),
                       backgroundColor: Colors.white,
                       textColor: primaryColor,
                     ),

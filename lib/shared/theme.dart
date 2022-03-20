@@ -7,6 +7,7 @@ Color secondaryColor = '#0BCAD4'.toColor();
 Color lightBlueColor = '#EDFCFD'.toColor();
 Color lightGrayColor = '#E9E9E9'.toColor();
 Color grayColor = '#7D8797'.toColor();
+Color yellowColor = '#F8B459'.toColor();
 
 double defaultMargin = 16;
 

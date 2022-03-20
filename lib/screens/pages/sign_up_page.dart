@@ -37,7 +37,7 @@ class SignUpPage extends StatelessWidget {
                 ],
               ),
             ),
-            const DefaultButton(text: 'Continue'),
+            DefaultButton(onTap: () {}, text: 'Continue'),
           ],
         ),
       )),
