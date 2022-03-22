@@ -4,6 +4,7 @@ import 'package:mydoctor/routes/pages.dart';
 import 'package:mydoctor/screens/pages/chatting_page.dart';
 import 'package:mydoctor/screens/pages/home_page.dart';
 import 'package:mydoctor/screens/pages/list_doctor_page.dart';
+import 'package:mydoctor/screens/pages/message_page.dart';
 import 'package:mydoctor/screens/pages/upload_photo_page.dart';
 import 'package:mydoctor/screens/pages/welcome_page.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: true,
-      home: const ChattingPage(),
+      home: const MessagePage(),
       getPages: Pages.pages,
     );
   }
