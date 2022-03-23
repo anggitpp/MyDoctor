@@ -70,7 +70,7 @@ class ListDoctorPage extends StatelessWidget {
                         Container(
                           width: phoneWidth(context),
                           height: 1,
-                          color: '#EEEEEE'.toColor(),
+                          color: veryLightGrayColor,
                         ),
                       ],
                     );

@@ -16,7 +16,7 @@ class HospitalListWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: defaultMargin),
       decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(color: '#EEEEEE'.toColor()))),
+          border: Border(bottom: BorderSide(color: veryLightGrayColor))),
       child: Row(
         children: [
           Container(

@@ -6,6 +6,7 @@ Color primaryColor = '#112340'.toColor();
 Color secondaryColor = '#0BCAD4'.toColor();
 Color lightBlueColor = '#EDFCFD'.toColor();
 Color lightGrayColor = '#E9E9E9'.toColor();
+Color veryLightGrayColor = '#EEEEEE'.toColor();
 Color grayColor = '#7D8797'.toColor();
 Color yellowColor = '#F8B459'.toColor();
 

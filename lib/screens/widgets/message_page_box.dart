@@ -20,7 +20,7 @@ class MessagePageBox extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: '#EEEEEE'.toColor(),
+            color: veryLightGrayColor,
           ),
         ),
       ),
