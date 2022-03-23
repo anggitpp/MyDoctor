@@ -1,10 +1,12 @@
 import 'package:get/get.dart';
 import 'package:mydoctor/bindings/home_page_binding.dart';
+import 'package:mydoctor/bindings/main_page_binding.dart';
 import 'package:mydoctor/bindings/sign_in_page_binding.dart';
 import 'package:mydoctor/bindings/sign_up_page_binding.dart';
 import 'package:mydoctor/bindings/upload_photo_page_binding.dart';
 import 'package:mydoctor/routes/route_name.dart';
 import 'package:mydoctor/screens/pages/home_page.dart';
+import 'package:mydoctor/screens/pages/main_page.dart';
 import 'package:mydoctor/screens/pages/sign_in_page.dart';
 import 'package:mydoctor/screens/pages/sign_up_page.dart';
 import 'package:mydoctor/screens/pages/upload_photo_page.dart';
@@ -30,6 +32,11 @@ class Pages {
       name: RouteName.signin,
       binding: SignInPageBinding(),
       page: () => const SignInPage(),
+    ),
+    GetPage(
+      name: RouteName.main,
+      binding: MainPageBinding(),
+      page: () => const MainPage(),
     ),
     GetPage(
       name: RouteName.home,

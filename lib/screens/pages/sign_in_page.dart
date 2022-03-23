@@ -61,7 +61,7 @@ class SignInPage extends StatelessWidget {
                 Obx(
                   () => DefaultButton(
                     onTap: controller.isCanSignIn.value
-                        ? () => Get.offAllNamed('/home')
+                        ? () => Get.offAllNamed('/main')
                         : () {},
                     text: 'Sign In',
                     isActive: controller.isCanSignIn.value,
