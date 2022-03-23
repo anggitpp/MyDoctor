@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mydoctor/routes/pages.dart';
+import 'package:mydoctor/screens/pages/doctor_profile_page.dart';
 import 'package:mydoctor/screens/pages/edit_profile_page.dart';
 import 'package:mydoctor/screens/pages/profile_page.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: true,
-      home: const EditProfilePage(),
+      home: const DoctorProfilePage(),
       getPages: Pages.pages,
     );
   }
