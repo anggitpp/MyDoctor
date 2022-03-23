@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 
 import 'package:mydoctor/shared/theme.dart';
+import 'package:supercharged/supercharged.dart';
 
 class DefaultButton extends StatelessWidget {
-  final Color? backgroundColor;
-  final Color? textColor;
   final String text;
   final Function() onTap;
+  final bool isActive;
+  final Color? backgroundColor;
+  final Color? textColor;
 
   const DefaultButton({
     Key? key,
-    this.backgroundColor,
-    this.textColor,
     required this.text,
     required this.onTap,
+    this.isActive = true,
+    this.backgroundColor,
+    this.textColor,
   }) : super(key: key);
 
   @override
@@ -25,7 +28,8 @@ class DefaultButton extends StatelessWidget {
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
           elevation: 0,
-          primary: backgroundColor ?? secondaryColor,
+          primary: backgroundColor ??
+              (isActive ? secondaryColor : '#EDEEF0'.toColor()),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -33,7 +37,7 @@ class DefaultButton extends StatelessWidget {
         child: Text(
           text,
           style: largeText.copyWith(
-            color: textColor ?? Colors.white,
+            color: textColor ?? (isActive ? Colors.white : '#B1B7C2'.toColor()),
             fontSize: 18,
           ),
         ),

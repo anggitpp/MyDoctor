@@ -6,11 +6,15 @@ import 'package:mydoctor/shared/theme.dart';
 class DefaultTextField extends StatelessWidget {
   final String label;
   final bool isPassword;
+  final TextEditingController? controller;
+  final Function(String)? onChanged;
 
   const DefaultTextField({
     Key? key,
     required this.label,
     this.isPassword = false,
+    this.controller,
+    this.onChanged,
   }) : super(key: key);
 
   @override
@@ -27,8 +31,10 @@ class DefaultTextField extends StatelessWidget {
         ),
         SizedBox(
           child: TextField(
+            controller: controller,
             obscureText: isPassword,
             style: mediumText,
+            onChanged: onChanged,
             decoration: InputDecoration(
               contentPadding: const EdgeInsets.all(12),
               focusedBorder: OutlineInputBorder(

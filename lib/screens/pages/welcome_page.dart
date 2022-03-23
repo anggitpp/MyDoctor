@@ -55,7 +55,7 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     DefaultButton(
-                      onTap: () {},
+                      onTap: () => Get.toNamed('/signup'),
                       text: 'Get Started',
                     ),
                     const SizedBox(
@@ -63,7 +63,7 @@ class WelcomePage extends StatelessWidget {
                     ),
                     DefaultButton(
                       text: 'Sign In',
-                      onTap: () => Get.toNamed('/home'),
+                      onTap: () => Get.toNamed('/signin'),
                       backgroundColor: Colors.white,
                       textColor: primaryColor,
                     ),
