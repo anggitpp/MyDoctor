@@ -9,6 +9,7 @@ Color lightGrayColor = '#E9E9E9'.toColor();
 Color veryLightGrayColor = '#EEEEEE'.toColor();
 Color grayColor = '#7D8797'.toColor();
 Color yellowColor = '#F8B459'.toColor();
+Color lightRedColor = '#E06379'.toColor();
 
 double defaultMargin = 16;
 
