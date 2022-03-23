@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mydoctor/controllers/sign_in_page_controller.dart';
 import 'package:mydoctor/screens/widgets/default_button.dart';
 import 'package:mydoctor/screens/widgets/default_text_field.dart';
 import 'package:mydoctor/shared/theme.dart';
@@ -8,6 +10,7 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.find<SignInPageController>();
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -30,14 +33,18 @@ class SignInPage extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                const DefaultTextField(
+                DefaultTextField(
                   label: 'Email Address',
+                  controller: controller.emailController,
+                  onChanged: (value) => controller.checkValid(),
                 ),
                 const SizedBox(
                   height: 24,
                 ),
-                const DefaultTextField(
+                DefaultTextField(
                   label: 'Password',
+                  controller: controller.passwordController,
+                  onChanged: (value) => controller.checkValid(),
                   isPassword: true,
                 ),
                 const SizedBox(
@@ -51,15 +58,27 @@ class SignInPage extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                DefaultButton(onTap: () {}, text: 'Sign In'),
+                Obx(
+                  () => DefaultButton(
+                    onTap: controller.isCanSignIn.value
+                        ? () => Get.offAllNamed('/home')
+                        : () {},
+                    text: 'Sign In',
+                    isActive: controller.isCanSignIn.value,
+                  ),
+                ),
                 const SizedBox(
                   height: 30,
                 ),
-                Center(
-                  child: Text(
-                    'Create New Account',
-                    style: mediumText.copyWith(
-                        color: grayColor, decoration: TextDecoration.underline),
+                GestureDetector(
+                  onTap: () => Get.toNamed('/signup'),
+                  child: Center(
+                    child: Text(
+                      'Create New Account',
+                      style: mediumText.copyWith(
+                          color: grayColor,
+                          decoration: TextDecoration.underline),
+                    ),
                   ),
                 ),
               ],

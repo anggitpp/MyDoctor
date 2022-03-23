@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:mydoctor/bindings/home_page_binding.dart';
+import 'package:mydoctor/bindings/sign_in_page_binding.dart';
 import 'package:mydoctor/bindings/sign_up_page_binding.dart';
 import 'package:mydoctor/bindings/upload_photo_page_binding.dart';
 import 'package:mydoctor/routes/route_name.dart';
@@ -27,6 +28,7 @@ class Pages {
     ),
     GetPage(
       name: RouteName.signin,
+      binding: SignInPageBinding(),
       page: () => const SignInPage(),
     ),
     GetPage(

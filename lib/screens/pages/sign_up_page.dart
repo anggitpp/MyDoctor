@@ -16,7 +16,10 @@ class SignUpPage extends StatelessWidget {
           child: SingleChildScrollView(
         child: Column(
           children: [
-            const DefaultHeader(text: 'Daftar Akun'),
+            DefaultHeader(
+              text: 'Daftar Akun',
+              backFunction: () => Get.back(),
+            ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 26, vertical: 40),
               child: Column(

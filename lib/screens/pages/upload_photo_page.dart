@@ -29,6 +29,7 @@ class UploadPhotoPage extends StatelessWidget {
                     ),
                     child: Stack(
                       children: [
+                        //TODO :: ADD CONDITION FOR UPLOAD PHOTO
                         Align(
                           alignment: Alignment.center,
                           child: Container(

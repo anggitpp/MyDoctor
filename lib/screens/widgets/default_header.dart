@@ -6,11 +6,13 @@ class DefaultHeader extends StatelessWidget {
   final String text;
   final TextStyle? textStyle;
   final Color? arrowColor;
+  final Function()? backFunction;
   const DefaultHeader({
     Key? key,
     required this.text,
     this.textStyle,
     this.arrowColor,
+    this.backFunction,
   }) : super(key: key);
 
   @override
@@ -20,10 +22,13 @@ class DefaultHeader extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(
-            Icons.arrow_back,
-            color: arrowColor ?? primaryColor,
-            size: 24,
+          InkWell(
+            onTap: backFunction,
+            child: Icon(
+              Icons.arrow_back,
+              color: arrowColor ?? primaryColor,
+              size: 24,
+            ),
           ),
           Text(
             text,
